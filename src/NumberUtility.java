@@ -21,10 +21,18 @@ public class NumberUtility {
 		String majorityString = percent.format(testNumber);
 		return majorityString;
 			}
-	public static String randomNumber(){
+	public static String randomInteger(){
 		Random r = new Random();
-		int x =  r.nextInt();
+		int x = r.nextInt();
 		int y = r.nextInt();
+		int z = (x + y)/2;
+		String result = Integer.toString(z);
+		return result;
+		}
+	public static String randomDouble(){
+		Random r = new Random();
+		double x = 1+r.nextInt(10);
+		double y =1+ r.nextInt(10);
 		double z = (x + y)/2;
 		String result = Double.toString(z);
 		return result;
@@ -38,6 +46,17 @@ public class NumberUtility {
 				max=num[i];
 					}
 		 result= Integer.toString(max);
+		 return result;
+	}
+	public static String minNumber(int num[]){
+		int min=num[0];
+		String result;
+		
+		for(int i=0;i<10;i++){
+			if(num[i]<min)
+				min=num[i];
+					}
+		 result= Integer.toString(min);
 		 return result;
 	}
 

@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+import java.util.Random;
 
 public class NumberUtilityClassapp {
 
@@ -13,14 +15,19 @@ public class NumberUtilityClassapp {
 		print(result2);
 		String result3 = NumberUtility.percentFormats(myTestNumber,2);
 		print(result3);
-		String result4 = NumberUtility.randomNumber();
+		String result4 = NumberUtility.randomInteger();
 		print(result4);
-		//String result5 = NumberUtility.maxNumber(int[] myNum);
-		//print(result5);
+		String result5 = NumberUtility.maxNumber(myNum);
+		print(result5);
+		print(NumberUtility.minNumber(myNum));
 		
 	}
 	
 	private static void print(String s){
 		System.out.println(s);
 	}
+	private static void print(int i){
+		System.out.println(i);
+	}
+	
 }
